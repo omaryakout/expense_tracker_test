@@ -49,7 +49,7 @@ class _ExpensesState extends State<Expenses> {
     });
     ScaffoldMessenger.of(context).clearSnackBars();
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text('Expense ${expenseIndex + 1} deleted fucked'),
+      content: Text('Expense ${expenseIndex + 1} deleted by me for test'),
       duration: Duration(seconds: 5),
       action: SnackBarAction(
           label: 'undo',
