@@ -3,6 +3,7 @@ import 'new_expense.dart';
 import '../models/expense_model.dart';
 import 'expenses_list/expense_list.dart';
 import 'new_expense.dart';
+import 'chart/chart.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -71,7 +72,9 @@ class _ExpensesState extends State<Expenses> {
         ],
       ),
       body: Column(
+       
         children: [
+           Chart(expenses:_registeredExpenses),
           Expanded(
               child: ExpenseList(
             deleteExpense: deleteCategory,
