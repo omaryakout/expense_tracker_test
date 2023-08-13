@@ -109,6 +109,7 @@ class _NewExpenseState extends State<NewExpense> {
           Row(
             children: [
               DropdownButton(
+                alignment: Alignment.bottomRight,
                 value: _selectedCategory,
                 items: Category.values
                     .map((category) => DropdownMenuItem(
@@ -125,18 +126,19 @@ class _NewExpenseState extends State<NewExpense> {
                   });
                 },
               ),
-              Expanded(
-                  child: TextButton(
-                onPressed: submitData,
-                child: const Text('save'),
-              )),
+            const Spacer(),
               Expanded(
                   child: TextButton(
                 child: const Text('cancel'),
                 onPressed: () => Navigator.pop(context),
               )),
+               Expanded(
+                  child: ElevatedButton(
+                onPressed: submitData,
+                child: const Text('save'),
+              ),),
             ],
-          )
+          ),
         ],
       ),
     );

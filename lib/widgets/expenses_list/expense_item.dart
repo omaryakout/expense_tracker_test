@@ -11,7 +11,7 @@ class ExpenseItem extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.all(20),
         child: Column(children: [
-          Text(expense.title),
+          Text(expense.title,style: Theme.of(context).textTheme.titleLarge,),
           SizedBox(height: 10,),
           Row(
             children: [Text('\$${expense.amount.toStringAsFixed(2)}'),
